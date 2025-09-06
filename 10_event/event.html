@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        *{
+            padding:0;
+            margin:0px;
+            box-sizing: border-box;
+        }
+        nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            background-color: black;
+            color: white;
+            text-transform: uppercase;
+        }
+        nav>ul{
+            display: flex;
+            gap: 20px;
+
+        }
+        nav>ul>li{
+            list-style: none;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition:background-color 0.4s ease-in;
+        }
+        nav>button{
+            padding: 10px 20px;
+            border:none;
+            background-color:red;
+            color:white;
+            text-transform:uppercase;
+            cursor:pointer;
+            transition:background-color 0.4s ease-in;
+            &:hover{
+                background-color: aqua;
+                color: black;
+            }
+        }
+
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 100wh;
+            background-color: aqua;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>event</h2>
+        <ul>
+            <li>event handler</li>
+            <li>event listener</li>
+        </ul>
+        <button onclick="login()">login</button>
+    </nav>
+    <main onmouseover="changeColor()" onmouseleave="changeColor2()">
+        <h1>Event in javascript</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <button>know more</button>
+    </main>
+    <script src="./event.js"></script>
+
+</body>
+</html>

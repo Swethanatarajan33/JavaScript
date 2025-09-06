@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        .outer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            height: 100vh;
+            position: relative;
+        }
+        .inner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:60%;
+            width: 40%;
+            border:10px solid white;
+            background-color: white;
+            box-shadow: -10px -10px 20px rgb(0, 195, 255);
+            position: absolute;
+            border-radius: 40px;
+        }
+        .inner>.name{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 800;
+            text-shadow:2px 2px 3px rgb(255, 255, 255);
+            height: 70px;
+            width: 70px;
+            border-radius: 50px;
+            color: rgb(255, 255, 255);
+            border: 1px solid white;
+            position: absolute;
+            background-color: black;
+            transition: all 2s ease-in ;
+        }
+        .name:hover{
+            background-color: aqua;
+            color: black;
+            }
+        #r{
+           
+            left:0%;
+            top: 0%;
+        }
+        #r:hover{
+            transform: translate(100px,100px) ;
+        }
+        #e{
+           
+            right: 0%;
+            top: 0%;
+        }
+        #ee{
+            
+            left:0%;
+            bottom: 0%;
+        }
+        #a{
+            
+            right: 0%;
+            bottom: 0%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <div class="name" id="r">R</div>
+            <div class="name" id="e">E</div>
+            <div class="name" id="ee">E</div>
+            <div class="name" id="n">N</div>
+            <div class="name" id="a">A</div>
+        </div>
+    </div>
+    <script src="./event2.js"></script>
+</body>
+</html>

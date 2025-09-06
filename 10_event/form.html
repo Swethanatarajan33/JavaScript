@@ -1,0 +1,159 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            display: flex;
+            height: 100vh;
+            background-color: blueviolet;
+            justify-content: center;
+            align-items: center;
+        }
+        .inner{
+            width: 300px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+
+        }
+        form>input{
+            display: flex;
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+        }
+        /* form>label{ */
+
+        /* } */
+
+
+    </style>
+</head>
+<body>
+     <div class="outer">
+        <div class="inner">
+            <form action="" id="stuForm">
+                <label for="">Name</label>
+                <input type="text" id="userName">
+                <label for="">Password</label>
+                <input type="password" id="userPass">
+                <button>register</button>
+            </form>
+        </div>
+    </div> 
+    <!-- <div class="outer">
+        <div class="inner">
+            <form action="" id="form">
+                <label for="">Number 1</label>
+                <input type="number" id="Number1">
+                <label for="">Number 2</label>
+                <input type="number" id="Number2">
+                <button>total</button>
+            </form>
+        </div>
+        <div class="output">
+        </div>
+        <select name="" id="">
+        <option value="">select color</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+        <option value="yellow">yellow</option>
+    </select>
+    </div> 
+    
+    
+    <script src="./form.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form event</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .outer{
+           
+            display: flex;
+            height: 100vh;
+            background-color: azure;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap:10px;
+        }
+
+        .outer > h2{
+            letter-spacing: 1.6px;
+        }
+
+        .inner{
+            width: 300px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px 20px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.7);
+        }
+
+        form > input{
+            display: block;
+            margin-bottom: 8px;
+            width: 100%;
+            padding: 10px;
+        }
+        form > label{
+            font-weight: bold;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        form > button{
+            width: 100%;
+            padding: 10px;
+            border-radius: 7px;
+            border: none;
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="outer">
+
+        <h2> Form Handling</h2>
+         
+          <div class="inner">
+              <form action="" id="stuForm">
+                  <label for="">Name</label>
+                  <input type="text" id="userName">
+                  <label for="">Password</label>
+                  <input type="text" id="userPass">
+                  <button> register</button>
+              </form>
+          </div>
+
+          <div class="output">
+
+          </div>
+    </div>
+
+
+    <script src="./form.js"></script>
+</body>
+</html>

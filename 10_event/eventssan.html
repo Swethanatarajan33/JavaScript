@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listener</title>
+    <style>
+        header{
+            height: 200px;
+            background-color: aqua;
+            text-align: center;
+        }
+        section{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 200px;
+            background-color: rgb(59, 58, 110);
+
+        }
+        section>.card{
+            width: 300px;
+            height:160px;
+            border: 3px solid;
+            border-radius: 10px;
+            align-items: center;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        article{
+            height:120px;
+            background-color:blue;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap:10px;
+        }
+        article >.output{
+            background-color: white;
+            height:20px;
+            width:200px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Event Listener</h1>
+        <button class="btn1" onclick="display()">event handler</button>
+        <button class="btn2">event listener</button>
+    </header>
+    <section>
+        <div class="card" onclick="hello1()">
+            <h2>card1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <div class="card">
+            <!-- <h2>card2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.</p> -->
+        </div>
+        <div class="card">
+            <h2>card3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <!-- <div class="card">
+            
+        </div> -->
+    </section>
+    <article>
+        <h2>keyboard event</h2>
+        <input type="text" placeholder="enter something" id="inp1">
+        <div class="output" >
+
+        </div>
+    </article>
+    <script src="./eventssan.js"></script>
+</body>
+</html>
