@@ -1,0 +1,186 @@
+1.can_write_js_in_2_ways:
+    *internal js
+    *external js
+2.how_many_ways_we_can_declare_variable: 
+    in 3 ways-
+        *let 
+        *var
+        *const
+3.Datatypes:- (2):-
+    *primitive Datatypes
+    *non-primitive Datatypes
+4.Primitive_Datatypes:-
+    *Number
+    *Boolean
+    *Undefined
+    *Null
+    *String
+    *BigInt
+5.Non_Primitive_Dataype:-
+    *Object
+    *Arrays
+    *Function
+6.variable_hosting:     can be used only before the var keyword 
+7.typeof_operator: used to know the datatype of the variable
+8.String:-
+    1*toUpperCase()
+    2*toLowerCase()
+    3*indexOf()
+    4*lastIndexOf()
+    5*charAt()
+    6*trim()
+    7*split()
+    8*replace()
+    9*replaceAll()
+    10*includes()
+    11*slice()
+    12*substring()
+    13*concat()
+    14*variable.length -used to find the length of the variable
+    15*String Interpolation ===== ${variable}
+9.function:-
+    1.named function -function fname(){}
+    2.anonymous function -function(){}
+    3.function with expression
+    4.arrow function - variable=()=>{}
+    5.nested function - variable=()=>{  variable1=()=>{}    }
+    6.higher order function - fname(()=>{})
+    7.callback function ()=>{}
+    7.immediate invoke function expression - ()()
+10.Arrays:-
+    1.push()
+    2.pop()
+    3.unshift()
+    4.shift()
+    5.slice()
+    6.splice()
+    7.join()
+    8.reverse()
+    9.concat()
+    10.includes()
+    11.indexOf()
+11.higher_order_array_methods:-
+    *forEach( ()=> )                used for travesing the array.
+    *map(  ()=>{}  )                is used for travesing the array and returns
+    *filter(  ()=>{}  )             used for traverse and check the condition
+    *reduce(()=>{} ,value)          reduces the array into single arraay  
+    *sort(()=>{})                   used to arrange the array in ascending or descending order
+12.Object:-
+    *how to access?      objectname.key
+    *how to modify?
+    *how to add?
+    *how to delete?      delete objname.key
+13.Methods in object:-
+    *Object.Keys()
+    *Object.values()
+    *Object.entries()
+    *Object.freeze()
+    *Object.isfrozen()
+    *Object.seal()
+    *Object.isSealed()
+    *Object.hasOwnProperty()
+    *Object.assign()
+14.JSON:-  used to interchange the data  from one system to another system,values stored in key and valaue pairs,we can use in any languages
+
+    *Human-Readable
+    *Lightweight
+    *Language-Independent
+
+    2 methods in json:
+        *JSON.stringify()      coverts  object to json(string )
+        *JSON.parse()           converts json to object(object)
+15.Destructure:-
+    allows to unpack of values from arrays, objects, and nested objects, and assigned to variables
+    1.object destructure  *need to give all the key element inside curly braces
+    2.array destructure   *no need to give all the key values needed can be given
+                    *it will not collect the remaining values into an variable
+    3.rest parameter    *it will collect the remaining values by using the keyword ... 3dots
+    4.spread operator   *used to merge or copy the elements and allows to expand the elements
+    5.shall copy        *it only copies the references of nested objects instead of creating new instances.
+                    *changes to the nested object in the copy will affect the original and vice versa.
+    6.deep copy         *creates a completely independent clone of the original object Changes to the copied object do not affect the original
+16.DOM:-
+    1.document.getElementById(" ")  ->since id is unique we can target only one id one time
+    2.document.getElementByClassName(" ")   ->return html collection (as array) it gives all the class contains same name
+    3.document.getElementsByTagName(" ")    ->return html collection (as array)
+    4.querySelector("")     ->returns 1st element
+    5.variable.innerText=" "    ->gives normal text
+    6.variable.innerHTML=" "    ->gives text with the tagname
+    7.querySelectorAll("")  ->returns  the given tag or class or id  contining element can be accessed by index
+    8.let variable = document.createElement("div")
+      let variable1 = document.createElement("footer")      ----creates an element
+    9.variable.classList.add("classname")                   ----creates class for the element
+    10.variable.classList.remove("classname")   
+        let id= element.getAttribute("id");                 ----create id for the element
+        element.setAttribute("id","id1");             
+    11.variable.style.propertyname="value"                  ----giving style for the element
+    12.variable1.after(variable)                            ----the place where the elemnt should be placed
+    variable1.before(variable)
+    variable1.prepend(variable)
+    variable1.append(variable)
+17.loop:-
+    1.for in loop(applicable for array and length) 
+    2.for of loop(applicable for array not for object)
+    3.prompt
+    4.alert
+18.Timing_Function:-
+    *setInterval
+    *setTimeOut
+    *clearTimeOut
+    *clearInterval
+19.Date_Math:-
+    date:-
+    let today = new Date();
+    today.getDate()
+    today.getDay()          -returns string
+    today.getHours()
+    today.getMinutes()
+    today.getSeconds()
+    today.getFullYear()
+    today.getMonths()       -return string
+    today.toLocalDateString()
+    today.toLocalString()
+    today.toDateString()
+    Math:-
+    Math.sqrt(16)
+    Math.pow()
+    Math.ceil()
+    Math.round()
+    Math.floor()
+    Math.min()
+    Math.max()
+    Math.random()*10
+20.class:-
+21.Promise:-        
+    created using new keyword followed by promise which contains 1 callback function which takes 2 parameter which is resolve and reject . resolve can be checked using then keyword ,reject can be checked by using catch keyword ,to check promise is present or not  we use finally block.
+                in this promise contains 3 statemnets :-
+                        *pending
+                        *fullfilled
+                        *rejected
+22.Fetch:-  used to fetch the api data 
+            fetch returns promise
+            to get original data convert it into JSON format
+23.async_and_await:-    async is used to face the asynchronous operation
+                        which provides Readable and synchronous style to work with promise
+                        so this operation makes asynchronous operation as easier to  manage
+                        using try and catch block we can handle exception
+                        Async:-it is a keyword ,used to declare a function which returns promise
+                                if it not returns promise then it we use map function to wrap to return promise
+                        Await:-it is used along with async function.
+                                this will pause the execution until the promise get setteled
+24.Event:- any event occurs on web page is called as an event
+25.Event_Handling:- events are already present in webpage .need of handlng the event is called as event handling
+26.Types_Of_Event_Handling:- 3types of event handling:
+                                    *Event handler
+                                    *DOM Properties 
+                                    *EventListener
+
+27.Event_handler :-*we can give event in html file so called as inline event handler
+                   *here we cant use same event more than one time but we can use different events
+28.DOM_properties:-*we can use event directly
+                   *we can asssign only one function if multiple function is assigned previous will be lost.
+29.event_listener:-*we can give event in js file which accepts 2 parameter (1)eventtype in doublequotes(2)function-in fun we can also give target element    
+                   *we can give same event any number of times
+                   *in EventListener we have 2 types:-
+                            -addEventListener()
+                            -removeEventListener()

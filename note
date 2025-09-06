@@ -1,0 +1,548 @@
+1.JavaScript -    
+            *JavaScript is a scripting language 
+            *used for creating interactive and dynamic web pages (or) used to add functionality
+            *JavaScript code used to run only in the browser, but now it can run on the server via Node.js.
+            *we can use b/h in frontend and backend also
+            *extenstion:   .js
+
+we can write in 2 ways:
+*1.internal js (in same html file inside body before closing of the body use script tag)
+*2.external js (create js file and link by using script tag  in src attribute  before the body tag)
+
+how many ways we can declare variable ??
+            *let(local scope)
+            *var(global scope)
+            *const
+
+LET -   declaration ✔
+        initialization ✔
+        declaraton and initialization   ✔
+        re-declaration  ❌
+
+VAR -   declaration ✔
+        initialization ✔
+        declaraton and initialization   ✔
+        re-declaration  ✔
+
+CONST - can accesscible from any where
+        declaraton and initialization   ✔
+
+DATATYPES:-
+        *primitive datatypes
+        *non-primtve datatypes
+
+Primitive Datatypes -
+    -Number
+    -Boolean
+    -String (can declare by using "" ,'' ,and aslo using back tick``)
+    -Undefined( any variable declared but not initialized is called undefined
+                type - undefined)
+    -Null   (variable initialized as null 
+                type - object)
+    -BigInt (count value prefixed with n)
+
+Non-Primitive  Datatype -
+    -Array
+    -Function
+    -Object
+--------------------------------------------------------------------------------------------------------------------------
+````````Variable Hoisting (accessing an element before var keyword)
+            *if we are accessing any variable before its declarion, and the variable has declared by var keyword then this declaration part will be moving to the top and it will give the output as undefined. it is called variable hoisting.
+            *variable hoisting is possible for only var ✔ keyword not for let ❌and const❌.
+
+````````typeof (typeof operator is used to know the datatype of the variable.)
+--------------------------------------------------------------------------------------------------------------------------
+String :-
+
+toUpperCase()           -----this method is used to convert any string into uppercase and it will return one new string.
+toLowerCase()           -----this method is used to convert any string into lowercase and it will return one new string.
+indexOf("value")        -----it is used to know the index of the given charecter from the string.
+                                it will take the first occurance of the given character.
+                                if the character is not present it will give -1.
+
+lastIndexOf("value")    -----this method will give the last occurance index number of the given character from the string.
+charAt()                -----it is used to know the character present in the given index.
+includes("value")       -----this method is used to know whether the given string is present or not.
+                                if it is present it will return true otherwise it will return false.
+trim()                  -----it is used to remove the whitespaces from both the sides of the string and return new string.
+split()                 -----this method is used to convert any string into array.
+replace()               -----it is used to replace one string with another string.it will replace only the first character
+replaceAll()            -----it will replace all the occurance of the given string.
+concat()                -----this method is used to combine 2 or more than two strings and it will return one new string.
+slice()                 -----it is used to extract one string from another string
+                                it will take 2 parameters(start index, end index)
+                                it will not include the end index value.
+                                here the string can traverse from left to right only
+substring()             -----it is used to extract one string from another string.
+                                it will take two parameters(startIndex, endIndex)
+                                it will not include the endIndex value.
+
+--------------------------------------------------------------------------------------------------------------------------
+length of the string:
+                            variable.length
+String Interpolation:
+
+let num1=10
+let num2=20
+let ad =num1 + num2;
+
+// addition of num1 and num2
+console.log(`the addition of ${num1} and ${num2} is ${ad} `);
+
+console.log(`the multiplication of ${num1} and ${num2} is ${num1 * num2} `);
+--------------------------------------------------------------------------------------------------------------------------
+3.FUNCTIONS:-
+
+1*Named Function ,function with parameter ,function with return 
+2*Annonymous  Function (the function does not have any name is called annonymous function.)
+3*function with expression 
+4*Arrow Function 
+5*Nested Function 
+
+what is Lexical Scopping ?
+                in nested function , inner function can access all the properties of the outer function but the outer function can't access the properties of the inner funciton . it is called Lexical scopping.
+
+6*Higher Order Function?
+                any function that takes another function as parameter is called Higher Order Function .
+Callback Function?
+                the function is sent to the higher-order-function as parameter is called callback function.
+
+7*IIFE (immediate invoke function expression)
+                whenever using iife stmt before used stmt should end with semicolon
+                ()()inside 1 -function should  be written
+                           2 -is used to call
+--------------------------------------------------------------------------------------------------------------------------how to create function:
+                
+                *take function keyword
+                *fun_name
+                *inside block write stmt
+ex:
+-----
+function display(){
+        console.log("i am")
+}display()
+
+TYPES OF FUNCTION:-
+1.Named Function(with parameter,with return keyword)
+2.Annonymous  Function(function does not have any name )
+3.function with expression 
+4.Arrow Function 
+5.Nested function(in nested function , inner function can access all the properties of the outer function but the outer function can't access the properties of the inner funciton . it is called Lexical scopping)
+6.Higher Order Function (any function that takes another function as parameter.)
+7.callback function.(the function is sent to the higher-order-function as parameter )
+8.IIFE  (immediate invoke function expression)(we use ()() paranthese inside 1 -function should  be written 2 -is used to call)
+
+
+1.Named Function:-
+                        function  display(){
+
+                        console.log("I am display function")
+                        }
+
+2.function with parameter :-
+                        function add(a,b)
+                        {
+                        
+                        console.log(`the addition of ${a} and ${b} is ${a+b}`)
+                        }
+
+                        add(20,30)
+
+3.function with return :-
+                        function multiply(a,b)
+                        {
+                        return a * b ; 
+                        }
+
+                        let res = multiply(10,3)
+                        console.log(res)
+
+4.function with expression 
+
+                        let oddEven = function(a)
+                        {
+
+                        if(a % 2 == 0)
+                        {
+                                console.log(`${a} is a even number`)
+                        }
+                        else{
+                                console.log(`${a} is odd number`)
+                        }
+
+                        }
+
+                        oddEven(9)
+                        oddEven(20)  
+
+5.Arrow functon:-
+                        let sub = (a,b)=>
+                        {
+                        return a - b
+                        }
+
+
+                        let res2 = sub(50,10)
+
+                        console.log(res2)  
+
+6.Nested function:-
+
+                let outer = ()=>{
+
+                console.log("I am outer function ")
+
+                let inner =()=>{
+                        console.log("I am inner function")
+                }
+
+                inner()
+                }
+                outer()
+
+7.Higher Order Function  , Callback Function:-
+                hello2( ()=>{
+                console.log("I am callback function")
+                } );
+
+8.IIFE  (immediate invoke function expression) ----
+
+                (function(a,b)
+                {
+                console.log("IIFE")
+                console.log(a+b)
+                })(10,20)                           
+--------------------------------------------------------------------------------------------------------------------------
+4. ARRAY:-
+--------------------------------------------------------------------------------------------------------------------------
+        array is a linear datastucture where we can store multiple values in continuous manner.     
+        in javascript we can store b/h homogeneous and heterogeneous data in array.     
+        we can add or remove in the array  
+        any modification is mostly done in original array
+
+ Array Methods in js:
+ -------------------------
+1*push() --used to modify or used to add any element at the end of the array ,it will return the length of the modified array
+2*pop()   --used to remove the last element from the array and it will return the removed element not length
+3*unshift() --used to add the element at the starting of the array ,return the length of the array
+4*shift() --used to delete the element from the starting of the array ,return the removed element
+5*includes() --used to check whether the data is present or not ,return true or false
+6*indexOf() --returns the index of the eleemnt ,if no element is present then it will return -1
+7*concat() --used to combine two or more than two arrays and it will return one new array
+8*join()   --convert any array into string
+9*reverse() --used to reverse the array . and it will modify the original array and it will be in reverse order
+10*slice(start_ndex,end_index) --used to extract the array  ,it will not modify the original array
+11*splice(startng index,count to delete element)
+  splice(startng index,count to delete ,replace an element)--by using this method we can remove,add,modify the array element. it can take 3 parameters(statindex,deletecount,replacevalue) this method will modify the original array.retruns new array
+
+Higher Order Array Method :-(fun takes another fun as parameter (map,filter,reduce))
+----------------------------
+1*forEach(   ()=>   ) --is higherorder array method ,it is used for travesing the array.
+                        it will take one callback functon where it can take 3 parameter(element,index,array) -//?no return type
+it is the higher order array methods . takes callback function as thier parameter 
+it can take 3parameter 1.function 2.index(i) 3.original array
+if you take 1 parameter wiith any name it will dsplay the array valuess  only
+
+2*map(  ()=>{}  )   --is higherorder array method ,it is used for travesing the array and returns. and we can perform any  operations with all the elements.
+                    it will take 3 parameter
+                    it will return new array
+                    it wll take one callback functon where it can take 3 parameter(element,index,array) -//?has return type
+                    whenever taking map method store it inside a variable
+
+3*filter(  ()=>{}  )  --is higherorder array method,it is used for traverse and check the condition.(filetr the condition)
+                    if the condition is matching it wll return that  element.
+                    it can take 3 parameters.
+
+4*reduce(()=>{} ,value)     --reduces the array into single arraay  
+                    takes 4 parameter(accumulator(acc),element,index,array)
+
+5*sort(()=>{})            --this method is used to arrange the array in ascending or descending order
+                    it wll take two parameters.
+                    firstpara - secondPara => ascending order
+                    secondPara - firstPara => descending order
+
+--------------------------------------------------------------------------------------------------------------------------
+5.OBJECT:-
+        An object in JavaScript is a data structure used to store related data collections. It stores data as key-value pairs, where each key is a unique identifier for the associated value. Objects are dynamic, which means the properties can be added, modified, or deleted at runtime.
+
+        There are two primary ways to create an object in JavaScript : Object Literal and Object Constructor.                    
+
+how to access?      objectname.key
+how to modify?
+how to add?
+how to delete?      delete objname.key
+
+Methods in object
+
+1.Object.keys()     (this method is used to return all thekeys in the object form of array)
+2.Object.values()   (this method is used to return all the values in the form of array.)
+3.Object.entries()  (gives al key value pairs)
+4.Object.freeze()   (this method is making the object frozen where we cannot delete or add or modify the object.)
+5.Object.isFrozen() (it is used tho check whether the given object is frozen or not. If it is frozen it will return true otherwise return false.)
+6.Object.seal()     (it is simlar to object.freez() method, here we cannot do delete or add but we can modify.)
+7.Object.isSealed() (it is used to know whether the object is sealed or not.)
+8.ObjectName.hasOwnProperty()  (it is used to know the key is present or not in the object.it will return boolean value.)
+9.object.assign()   (combines two or more object to retrun a new object.)
+
+--------------------------------------------------------------------------------------------------------------------------
+6.JSON:-(used to interchange the data  from one system to another system,values stored in key and valaue pairs,we can use n any languages)
+--------------------------------------------------------------------------------------------------------------------------
+        JavaScript Object Notation 
+        is a lightweight data-interchange format 
+        easy for humans to read and write, 
+        And easy for machines to parse and generate.  
+ 
+Advantages of JSON: - 
+
+*Human-Readable:         JSON's structure is easy for developers to understand and  write. 
+*Lightweight:            JSON is a minimal format that reduces the size of the data being transmitted. 
+*Language-Independent:  JSON can be used with many programming languages, including JavaScript, Python, Ruby, Java, etc. 
+
+ 1.JSON.stringify()
+------------------
+convert any js object into json
+it will not have prototype
+type : String
+
+2. JSON.parse()
+----------------
+it is used to convert any json into javascript object.
+--------------------------------------------------------------------------------------------------------------------------
+7.DESTRUCTURE:-is a JavaScript expression that allows to unpack of values from arrays, or properties from objects, into distinct variables data can be extracted from arrays, objects, and nested objects, and assigned to variables
+--------------------------------------------------------------------------------------------------------------------------
+1. Object Destructure
+2. Array Destructure
+3. rest parameter 
+4. spread operator
+5. shallow copy 
+6. deep copy
+
+OBJECT DESTRUCTURE:-
+        while using name given nside culrlu braces should be same it can be any order
+
+ARRAY DESTRUCTURE:-
+        Array members can be unpacked into different variables
+
+REST PARAMETER:-
+        used to group the remaining elements into an array.
+        It collects "the rest" of the arguments BY three dots (...) that were not explicitly specified.
+EX:-
+(a,b, ...c)
+
+SPREAD OPERATOR:-
+        The spread operator in JavaScript allows  to expand an array, object, or iterable into individual elements.
+        It is often used to copy, merge, or pass elements.
+        The spread operator is represented by three dots (...)
+EX:
+[...arr1, ...arr2]
+
+SHALLOW COPY:-
+        A shallow copy of an object is a new object that is a copy of the original, but 
+        it only copies the references of nested objects instead of creating new instances. 
+        This means that if the original object contains another object as a property, changes to the nested object in the copy will affect the original and vice versa.
+
+DEEP COPY:-(1st covert object into json(using stringify) then covert into object)
+        creates a completely independent clone of the original object, including all nested object. 
+        changes to the copied object do not affect the original.
+        to handle change in original array due to shallow copy we go for deep copy
+--------------------------------------------------------------------------------------------------------------------------
+8.LOOPING:-
+                1.for in loop ----displays index
+		2.for of loop -----displays All elements
+		3.for in loop (in object)----displays key
+		4.for of loop is not possible in object
+		5.alert --gives pop up msg after clicking ok then only it shows the page
+		6.prompt -gives dialogue box which makes user to give input
+--------------------------------------------------------------------------------------------------------------------------
+9.DOM:-(Direct Object Model)    programming interface for web documents, 
+                                it allows to manipulate the structure,style,and content of a webpage dynamically
+                                dom represents the structure of the document as (a tree structure)
+                                so each object corresponds to a part of the document(element,attribute,text)
+--------------------------------------------------------------------------------------------------------------------------
+Key Points:-
+-------------
+*DOM is created by browser so called browser's object
+*structured as tree with nodes 
+*window object represent the browser window so called global's object
+
+Method to access:-
+------------------
+let element = document.getElementsByClassName("box");
+let open= document.getElementById("open");
+let htag= document.getElementsByTagName("h1")
+let element= document.querySelector("div")
+let element1= document.querySelectorAll("div")
+console.log(element.innerText);
+console.log(element3.innerHTML);
+let id= element3.getAttribute("class");
+element3.setAttribute("class","inner"); 
+element.style.background="blue";
+console.log(element.textContent);
+
+Method to insert and remove:-
+let heading = document.createElement("div")
+
+heading.append(h1);
+ navv.prepend(heading);
+ navv.before(heading);
+ navv.prepend(heading);
+ navv.after(heading)
+ heading.remove();
+
+Managing classes:-
+heading.classList.add("join")
+heading.classList.add("joined")
+heading.classList.remove("joined")
+heading.classList.toggle("active")
+console.log(heading.classList.contains("join"));
+
+//how to target
+//how to wrte inside element
+//how to write css in js
+// how to add class
+--------------------------------------------------------------------------------------------------------------------------
+11.TIMING FUNCTION:-
+--------------------------------------------------------------------------------------------------------------------------
+	1.setTimeout- executes after a specific time ,takes 2 parameters :(calllback fun,time) , used to send msg at sometime
+	2.setInterval-executes again again till to a specific time,takes 2 parameters :(callback fun,time)
+	3.clearTimeout- used to stop printing, takes the stored variable name as the parameter
+	4.clearInterval- used to stop printing agan and again ,takes the stored variable name as the parameter
+--------------------------------------------------------------------------------------------------------------------------
+12.DATE_MATH:-  
+date:-creates object for Date using (new ) keyword  
+        ex:let variable = new Date()
+math:-creates  object for Math using (Math) keyword
+        ex: Math.method()
+--------------------------------------------------------------------------------------------------------------------------
+we have predefined methods in date use it by variablename.method()
+
+getDay()
+getMonth()
+*returns the value in integer formt
+*to get day in string  make an array and give this and access
+ex:
+days[variablename.getDay()]
+let days=['sunday','Monday','Tuesday','Wednesday','Thursday','friday','saturday']
+let months=['jan','feb','march','april','may','jun','jul','aug','sep','oct','nov','dec']
+
+date method():-
+---------------
+getHours()
+getMinutes()
+getDate()
+getSeconds()
+getFullYear()
+getMonth()
+getDay()
+toLocaleDateString()
+toDateString()
+toLocaleString()
+toLocaleTimeString()
+
+math method():-
+---------------
+Math.sqrt()
+Math.pow()
+Math.round()
+Math.ceil()
+Math.floor()
+Math.min()
+Math.max()
+Math.floor(Math.random()*10)
+--------------------------------------------------------------------------------------------------------------------------
+13.PROMISE:-
+--------------------------------------------------------------------------------------------------------------------------
+promise -it is an javascript object ,created using new keyword,takes 1 calllback fun, with 2 parametes resolve and reject
+            ex:
+let p1= new Promise((resolve,reject)=>{
+
+})
+
+states in promise:
+------------------
+ *pending       (initial state, neither fulfilled nor rejected)
+ *fullfilled    (operation completed successfully)
+ *rejected      (the operation failed)
+
+to check whether the promise it has 1s resolved or rejected we use:
+--------------------------------------------------------------------
+* .then is used to handle the resolve 
+* .catch is used to handle the reject
+* .finally is used to check whether the promise is present or not and it executes always
+ here execution of finally will occur first then according to reject and resolve next executon will be occured
+
+static Methods of Promise:-
+----------------------------
+*Promise.any(iterable)
+--------------------------------------------------------------------------------------------------------------------------
+14.FETCH:-
+--------------------------------------------------------------------------------------------------------------------------
+fetch -is used to fetch any api data ,it retuns promise ,we have to handle by original data
+       since we need data we need to convert it into json format
+ex:
+
+ let fetchedData= fetch("https://fakestoreapi.com/products")
+
+ console.log(fetchedData);
+
+ fetchedData
+ .then((data)=>{
+     console.log(data); // return type is promise if need chnge it into json format
+ })
+ .catch((err)=>{
+     console.log(err);    
+    
+ })
+ console.log(fetchedData);
+--------------------------------------------------------------------------------------------------------------------------
+15.ASYNC and AWAIT:-    used to handle asynchronous operations in javascript,they provide more readable and synchronous-style to working with promises,and making asynchronous code easier to manage and understand
+--------------------------------------------------------------------------------------------------------------------------
+async keyword:-
+used to declare a function that always returns a promise if its not returning promise then automatically it wraps the return value in a promise
+
+await keyword:-
+only used insde an async function .it pauses the execution of the functon until the promise resolves,
+the function executes only after the promise has settledand making the code look synchronous.
+
+handling exception:- using try and catch blocks
+ used to handle exception during asynchronous operation
+
+ example:-
+
+ async function fetchWithErrorHandling(){
+        try{
+
+        }catch(error){
+
+        }
+ }
+ fetchWithErrorHandling
+
+ ex:
+ let getData = async()=>{
+  try{
+    let data = await fetch("https://api.github.com/users")88
+    //console.log((data));
+    let jsonData = await data.json()
+    console.log(jsonData); //it wll gve the origina data.
+  }
+  catch(err){
+    console.log(err);
+  }
+}
+getData()
+--------------------------------------------------------------------------------------------------------------------------
+16.CLASS:-
+--------------------------------------------------------------------------------------------------------------------------
+class Student{
+    sName;
+    sAge;
+
+    constructor(sName,sAgee){
+        this.sName=sName;
+        this.sAge= sAgee;
+    }
+}
+let s1= new Student("reena",45)
+console.log(s1.sAge);
+console.log(s1.sName);

@@ -1,0 +1,304 @@
+                                        ctr+rght click---termnal
+java script is a programming language also a scripting language used to add functionality 
+we can use b/h in frontend and backend also
+extenstion:   .js
+we can write in 2 ways:
+*1.internal js (in same html file inside body before closing of the body use script tag)
+*2.external js (create js file and link by using script tag  in src attribute  before the body tag)
+
+crt+/----makes as comment
+//interview questions: map,filter,arrays
+print stmt is:
+console.log();    or log
+
+declare and initialization can done in 2 ways:
+--------------------------------------------------------------------------------------------------------------------------
+1.INTRODUCTION
+--------------------------------------------------------------------------------------------------------------------------
+no need of dataype and semicolon
+3 keywords to declare a variable :
+* let (we can reinitialize the value)
+* var (we can reinitialize the value)
+* const (cant change )
+
+d/b let,var,const:
+------------------------------------------------------
+let:
+*redeclaration is not possible using same name (let a= 10;
+                                let a)
+*reintialization is possible
+
+var:
+*redeclaration is possible  (let a= 10;
+                            let a)
+*reintialization is possible
+*if we trying to access variable before declaration and the variable has declared by var keyword then this declaraton part will be movng to the top and it will give the output as undefined , it is called VARIABLE HOSTING.
+*variable hosting is possible for only var keyword not for let and const.
+ex:
+console.log(a)
+var a =30
+
+o/p:
+undefined (it only takes declaration not initiaization )
+
+const:
+*no redecla
+*no initialization
+*we should decl and initializaton in same line
+
+DATATYPES:
+
+ 1.primitive (6):-
+         1) number (b/h int and double)
+         2) string (declare in 3 ways using `` '' "")
+         3) boolean (true /false)
+         4) undefined  (variable declared not initialized )
+                        ( typeof is undefined )
+         5) null        (variable initialized as null )
+                        (typeof null is object)
+         6) bigint (prefixed with n  type is big)
+undefined:
+----------------------------------------------------------
+any variable declared but not initialized is called undefined
+
+ 2. Non-Prmitive (3):-
+         1) Array(linear ds stores the data in continueous mannner here we can store hetero and homogeneous also)
+         2) Function(
+                syntax:
+                function function_name(){
+                        //stmt
+                }
+                function_name()
+         )
+
+         3) Object(stored as key and value pairs separated by colon
+         key should be unique
+         values can be same
+                syntax :
+                let studentt={
+
+                })
+
+to know the datatype use (typeof)operator  
+
+operator:
+*typeof --operator is used to know the dataype of the variable
+--------------------------------------------------------------------------------------------------------------------------
+2.String: (var.length)
+--------------------------------------------------------------------------------------------------------------------------
+        1. toUpperCase():
+                this method is used to convert any string into uppercase and it will return one new string.
+
+        2. toLowerCase():
+               this method is used to convert any string into uppercase and it will return one new string. 
+
+        3. indexOf("value")
+                it is used to know the index of the given charecter from the string.
+                it will take the first occurance of the given character.
+                if the character is not present it will give -1.
+
+        4. lastIndexOf()
+                this method will give the lst occurance index number of the given character from  the string.
+
+        5. charAt()
+                it is used to know the character present in the given index1.
+
+        6. includes()
+                used to find whether the given string is present or not 
+                if it s present it wll return true otherwise it will return false
+
+        7. Trim()
+                it is used to remove the whitespaces from both the sides of the string and it will return new string.
+
+        8. split()
+                split the character into array according to value given in the bracket
+--------------------------------------------------------------------------------------------------------------------------
+3.FUNCTION:
+--------------------------------------------------------------------------------------------------------------------------
+how to create function:
+                
+                *take function keyword
+                *fun_name
+                *inside block write stmt
+ex:
+-----
+function display(){
+        console.log("i am")
+}display()
+
+TYPES OF FUNCTION:-
+1.Named Function(with parameter,with return keyword)
+2.Annonymous  Function(function does not have any name )
+3.function with expression 
+4.Arrow Function 
+5.Nested function(in nested function , inner function can access all the properties of the outer function but the outer function can't access the properties of the inner funciton . it is called Lexical scopping)
+6.Higher Order Function (any function that takes another function as parameter.)
+7.callback function.(the function is sent to the higher-order-function as parameter )
+8.IIFE  (immediate invoke function expression)
+
+
+1.Named Function:-
+                        function  display(){
+
+                        console.log("I am display function")
+                        }
+
+2.function with parameter :-
+                        function add(a,b)
+                        {
+                        
+                        console.log(`the addition of ${a} and ${b} is ${a+b}`)
+                        }
+
+                        add(20,30)
+
+3.function with return :-
+                        function multiply(a,b)
+                        {
+                        return a * b ; 
+                        }
+
+                        let res = multiply(10,3)
+                        console.log(res)
+
+4.function with expression 
+
+                        let oddEven = function(a)
+                        {
+
+                        if(a % 2 == 0)
+                        {
+
+                                console.log(`${a} is a even number`)
+                        }
+                        else{
+                                console.log(`${a} is odd number`)
+                        }
+
+                        }
+
+                        oddEven(9)
+                        oddEven(20)  
+
+5.Arrow functon:-
+                        let sub = (a,b)=>
+                        {
+                        return a - b
+                        }
+
+
+                        let res2 = sub(50,10)
+
+                        console.log(res2)  
+
+6.Nested function:-
+
+                let outer = ()=>{
+
+                console.log("I am outer function ")
+
+                let inner =()=>{
+                        console.log("I am inner function")
+                }
+
+                inner()
+                }
+                outer()
+
+7.Higher Order Function  , Callback Function:-
+                hello2( ()=>{
+                console.log("I am callback function")
+                } );
+
+8.IIFE  (immediate invoke function expression) ----
+
+                (function(a,b)
+                {
+                console.log("IIFE")
+                console.log(a+b)
+                })(10,20)
+array:
+linear ds
+can store more than one value
+in continuous manner
+here we can store homo and hetero
+
+
+
+
+variable hosting:
+declaration only goes to top not initialization
+whenever trying to access a varable  
+
+
+json=javascript object notation
+json is a one format used to store the data in" key and value pair "
+type of json is string
+
+we have 2 methods :
+1.JSON.stringify()
+------------------
+convert any js object into json
+it will not have prototype
+type : String
+
+2.JSON.parse()
+------------------
+convert any json into javascript object
+------------------------------------------------SIR NOTES--------------------------------------------------------------
+JSON (Javascrpt Object Notation) is a lightweight dat-interchange format that is easy for humans to read and write , and easy for machines to parse and generate.
+
+advantages of json:-
+===================
+1.Human-Readable:
+JSON 's structure is easy developers to understand and write.
+
+2.Lightweight:
+===================
+JSON is a minimal format that reduce the size of the data being transmitted 
+
+3.Language-Independent :
+========================
+JSON can be used with many programming languages,includng JavaScript,Python,Java,etc.
+
+
+
+destructure:
+
+
+loop:
+for in -----gives ndex
+for of ==== gives element
+for in 
+
+
+
+
+DOM-document object model
+before dom we have bom browser object model
+
+
+event:any action perform on web page
+events are already present (in web page or browser)we only handle the events called as event handling
+3types of event handling: event are handled on the tagname
+*Inline event handling //used to write in html tag,it can print only one function
+*DOM properties //directly used ,we can asisn only one function if multiple function is assigned previous will be lost 
+*addEventListener(event,function) 
+to overcome the disadvantage we uses:
+" "  event name
+function   store or pass or give fun
+
+*addEventListener (" ",function)
+any absence we perform
+1st create functon
+
+
+
+FORM HANDLING:
+entered data need to store is handled
+
+event obj --represents the evnt trgger
+
+
+on form the submit will ocur as submitevent -default nature page refresh to avoid use a metghod preventDefault() to prevent referesh
+in normal submit will ocur as click event
